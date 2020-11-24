@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>29.2.1</version>
+		<relativePath />
+	</parent>
+
+	<groupId>net.imglib2</groupId>
+	<artifactId>i2k2020-introduction</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>I2K2020 ImgLib2 Introductory Tutorial</name>
+	<description>Introduction to ImgLib2 and BigDataViewer</description>
+	<url>https://github.com/saalfeldlab/i2k2020-imglib2-intro</url>
+	<inceptionYear>2020</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>BSD 2-Clause License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>StephanPreibisch</id>
+			<name>Stephan Preibisch</name>
+			<url>https://imagej.net/User:StephanP</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>axtimwalde</id>
+			<name>Stephan Saalfeld</name>
+			<url>https://imagej.net/User:Saalfeld</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<contributors>
+		<contributor>
+			<name>Tobias Pietzsch</name>
+			<url>https://imagej.net/User:Pietzsch</url>
+			<properties><id>tpietzsch</id></properties>
+		</contributor>
+	</contributors>
+
+	<properties>
+		<enforcer.skip>true</enforcer.skip>
+
+		<!-- TODO remove when pom-scijava-base is updated -->
+		<scijava.jvm.version>8</scijava.jvm.version>
+		<scijava.release.version>8</scijava.release.version>
+		<scijava.jvm.build.version>[1.8.0-101,)</scijava.jvm.build.version>
+		<maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+
+		<imglib2-realtransform.version>3.1.1</imglib2-realtransform.version>
+		<imglib2-algorithm-gpl.version>0.3.0</imglib2-algorithm-gpl.version>
+
+		<package-name>net.imglib2</package-name>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.projectName>I2K2020 ImgLib2 Introductory Tutorial.</license.projectName>
+		<license.copyrightOwners>Stephan Preibisch, Stephan Saalfeld</license.copyrightOwners>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-vistools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-realtransform</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-algorithm-gpl</artifactId>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>java-9</id>
+			<activation>
+				<jdk>[9,)</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.release>${scijava.jvm.version}</maven.compiler.release>
+			</properties>
+		</profile>
+	</profiles>
+</project>
