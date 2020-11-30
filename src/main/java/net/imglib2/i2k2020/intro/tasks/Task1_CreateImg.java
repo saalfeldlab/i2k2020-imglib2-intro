@@ -21,6 +21,8 @@ public class Task1_CreateImg {
 	 */
 	public static Img<FloatType> createNewImg() {
 
+		//TODO: fill
+
 		// create a 5x5 pixel image of type float
 
 		// generate a random number generator
@@ -42,6 +44,8 @@ public class Task1_CreateImg {
 	 * @return
 	 */
 	public static Img<FloatType> createImgFromArray() {
+
+		//TODO: fill
 
 		return null;
 	}

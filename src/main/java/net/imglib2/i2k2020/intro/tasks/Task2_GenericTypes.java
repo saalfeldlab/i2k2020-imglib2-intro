@@ -21,6 +21,7 @@ public class Task2_GenericTypes {
 	 */
 	public static <T extends NumericType<T>> void add(final Img<T> img, final T value) {
 
+		//TODO: fill
 	}
 
 	/**
@@ -31,8 +32,7 @@ public class Task2_GenericTypes {
 	 */
 	public static <T extends RealType<T>> void sqrt(final Img<T> img) {
 
-		for (final T pixelValue : img)
-			pixelValue.setReal(Math.sqrt(pixelValue.getRealDouble()));
+		//TODO: fill
 	}
 
 	public static void main(String[] args) {

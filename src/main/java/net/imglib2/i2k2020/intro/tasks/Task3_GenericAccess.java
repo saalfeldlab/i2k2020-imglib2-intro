@@ -20,6 +20,8 @@ public class Task3_GenericAccess {
 	 */
 	public static <T extends Comparable<T> & Type<T>> T max(final Iterable<T> iterable) {
 
+		//TODO: fill
+
 		return null;
 	}
 

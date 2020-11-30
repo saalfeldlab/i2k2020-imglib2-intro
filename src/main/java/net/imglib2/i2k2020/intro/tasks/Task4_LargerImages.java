@@ -1,6 +1,5 @@
 package net.imglib2.i2k2020.intro.tasks;
 
-import net.imglib2.Cursor;
 import net.imglib2.IterableInterval;
 import net.imglib2.img.Img;
 import net.imglib2.img.ImgFactory;
@@ -33,15 +32,9 @@ public class Task4_LargerImages {
 	 */
 	public static void testIteration(final IterableInterval<?> imgA, final IterableInterval<?> imgB) {
 
-		final Cursor<?> cursorA = imgA.localizingCursor();
-		final Cursor<?> cursorB = imgB.localizingCursor();
+		//TODO: fill
 
-		while (cursorA.hasNext() && cursorB.hasNext()) {
-			cursorA.fwd();
-			cursorB.fwd();
-
-			System.out.println(Util.printCoordinates(cursorA) + " <> " + Util.printCoordinates(cursorB) + " equal? " + Util.locationsEqual(cursorA, cursorB));
-		}
+		// iterate both images, write out positions next to each other when iterating
 	}
 
 	/**
